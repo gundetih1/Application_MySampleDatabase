@@ -25,15 +25,24 @@ public class Employees {
 	@Column(name = "jobTitle", nullable = false, length = 50)
 	private String jobTitle;
 	
+	@Column(name = "extension", nullable=false,length=5)
+	private String extension;
+	
+	@Column(name="officeCode",nullable=false,length=1)
+	private Integer officeCode;
+	
 	public Employees() {}
 
-	public Employees(Integer employeeNumber, String lastName, String firstName, String email, String jobTitle) {
+	public Employees(Integer employeeNumber, String lastName, String firstName, String email, String jobTitle,
+			String extension, Integer officeCode) {
 		super();
 		this.employeeNumber = employeeNumber;
 		this.lastName = lastName;
 		this.firstName = firstName;
 		this.email = email;
 		this.jobTitle = jobTitle;
+		this.extension = extension;
+		this.officeCode = officeCode;
 	}
 
 	public Integer getEmployeeNumber() {
@@ -75,6 +84,24 @@ public class Employees {
 	public void setJobTitle(String jobTitle) {
 		this.jobTitle = jobTitle;
 	}
+
+	public String getExtension() {
+		return extension;
+	}
+
+	public void setExtension(String extension) {
+		this.extension = extension;
+	}
+
+	public Integer getOfficeCode() {
+		return officeCode;
+	}
+
+	public void setOfficeCode(Integer officeCode) {
+		this.officeCode = officeCode;
+	}
+
+	
 	
 	
 

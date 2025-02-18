@@ -23,5 +23,9 @@ public class EmployeesService {
 		Optional<Employees> employee = employeesRepository.findById(id);
 		return employee. orElse(null);
 	}
+	
+	public List<Employees> saveEmployees(List<Employees> employees){
+		return employeesRepository.saveAll(employees);
+	}
 
 }	

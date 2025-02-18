@@ -29,4 +29,8 @@ public class CustomersService {
 		Optional<Customers> customer = customersRepository.findById(id);
 		return customer.orElse(null);
 	}
+	
+	public List<Customers> saveCustomers(List<Customers> customers){
+		return customersRepository.saveAll(customers);
+	}
 }
