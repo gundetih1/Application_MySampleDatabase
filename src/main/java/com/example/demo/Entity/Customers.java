@@ -2,6 +2,8 @@ package com.example.demo.Entity;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -51,6 +53,7 @@ public class Customers {
 
 	@ManyToOne
 	@JoinColumn(name = "salesRepEmployeeNumber", referencedColumnName = "employeeNumber")
+	@JsonIgnore
 	private Employees salesRep;
 	
 	//@Column(name = "salesRepEmployeeNumber")

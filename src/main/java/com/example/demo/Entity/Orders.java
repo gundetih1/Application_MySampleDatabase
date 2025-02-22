@@ -1,5 +1,7 @@
 package com.example.demo.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -26,6 +28,7 @@ public class Orders {
 	
 	@ManyToOne
 	@JoinColumn(name="customerNumber")
+	@JsonIgnore
 	private Customers customer;
 	
 	public Orders() {}
